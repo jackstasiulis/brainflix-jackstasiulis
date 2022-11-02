@@ -1,0 +1,407 @@
+@use './Styles/Partials/variables.scss' as *;
+@use './Styles/Partials/mixins.scss' as *;
+
+main{
+    // margin: 1rem;
+    font-family: Avenir, Arial, Helvetica, sans-serif;
+}
+body{
+    margin: 0;
+}
+::placeholder{
+    color: #323232;
+}
+
+
+
+.header{
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include tablet{
+        margin: 1rem 2.25rem 0rem;
+        flex-direction: row;
+        
+        // background: red;
+    }
+
+    &__logo{
+        width: 10rem;
+        height: auto;
+        margin: 0rem 0rem 1rem;
+
+        @include tablet{
+            margin-top: 1rem;
+            padding-right: 1rem;
+        }
+
+    }
+
+    &__items{
+        display: flex;
+        gap: 1rem;
+        width: 100%;
+        justify-content: flex-end;
+
+        &--input{
+            width: 100%;
+            font-size: 1rem;
+            border-color: #E1E1E1;
+            border-style: solid;
+            border-radius: 5px;
+            padding: 1rem 3rem;
+            background-color: #FAFAFA;
+            background-image: url(./assets/Icons/search.svg);
+            background-size: 1.5rem;
+            background-position: center;
+            background-position-x: left;
+            background-repeat: no-repeat;
+            background-position: 1rem;
+
+            @include tablet{
+                width: 50%;
+                // margin-left: 8rem;
+            }
+        }
+
+        &--pic{
+            background: grey;
+            object-fit: cover;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            
+
+            @include tablet{
+                margin-right: 2.25rem;
+                position: absolute;
+                right: 0%;
+            }
+
+        }
+    }
+    &__button{
+        width: 100%;
+        height: 3.5rem;
+        border: none;
+        border-radius: 4px;
+        font-size: 1rem;
+        background: #0095FF;
+        background-image: url(./assets/Icons/upload.svg);
+        background-size: 2rem;
+        background-position: center;
+        background-position-x: left;
+        background-repeat: no-repeat;
+        background-position: 1rem;
+        color: #FFFFFF;
+
+        @include tablet{
+            padding-left: 1rem;
+        }
+
+        
+
+        &--container{
+            width: 100%;
+            margin: 1rem;
+
+            @include tablet{
+                margin-right: 5rem;
+                width: 50%;
+            }
+        }
+    }
+}
+
+
+
+.player{
+    margin: 1rem;
+
+    @include tablet{
+        margin: 2.25rem;
+    }
+    &__image{
+        width: 100%;
+        margin: 0;
+        padding: 0;
+
+        &--container{
+            @include tablet{
+                background-size: auto;
+                padding: 0rem 2.25rem;
+                margin: 0;
+                background: black;
+            }
+        }
+    }
+    &__title{
+        @include tablet{
+            font-size: 2.5rem;
+            font-weight: 900;
+            margin-bottom: 0;
+        }
+
+    }
+
+    &__details{
+        &--container{
+            display: flex;
+            justify-content: space-between;
+        }
+
+
+        &--left{
+            @include tablet{
+                display: flex;
+                gap: 2rem;
+            }
+            
+        }
+
+        &--right{
+            @include tablet{
+                display: flex;
+                gap: 2rem;
+                // align-items: center;
+            }
+            
+        }
+
+        &--text__author{
+            font-weight: 600;
+
+            @include tablet{
+            }
+        }
+
+        &--text__date{
+            color: #AFAFAF;
+
+            @include tablet{
+            }
+        }
+
+        &--text__likes{
+            margin: 0;
+            color: #AFAFAF;
+
+            @include tablet{
+                margin: 1rem 0;
+            }
+        }
+        &--text__views{
+            color: #AFAFAF;
+        }
+
+        &--container{
+            display: flex;
+            border-top: 2px solid #E1E1E1;
+            border-bottom: 2px solid #E1E1E1;
+            gap: 8rem;
+            
+            @include tablet{
+                border-top: none;
+            }
+        }
+    
+        &--right{
+            // display: flex;
+            // flex-direction: row;
+    
+            
+    
+            &__views{
+                display: flex;
+                // flex-direction: column;
+            }
+    
+            &__likes{
+                display: flex;
+                height: 1rem;
+
+                @include tablet{
+                    height: initial;
+                }
+                
+            }
+    
+            &__image{
+                margin-right: 8px;
+                
+                
+            }
+        }
+    }
+}
+
+
+.conversation{
+    margin: 1rem;
+    
+
+    &__form{
+        display: flex;
+        padding-bottom: 1rem;
+        border-bottom: 2px solid #E1E1E1;
+
+        &--pic{
+            background: grey;
+            object-fit: cover;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-top: 1.5rem;
+
+            &__container{
+
+            }
+        }
+
+        &--title{
+            font-weight: 500;
+            color: #AFAFAF;
+            margin: 0.1rem 0rem;
+            
+            &__container{
+                display: flex;
+                flex-direction: column;
+                margin: 0rem 0rem 0rem 1rem;
+                width: 100%;
+            }
+        }
+
+        &--textBox{
+            font-size: 1rem;
+            font-family: inherit;
+            color: #323232;
+            border-color: #E1E1E1;
+            border-style: solid;
+            border-radius: 5px;
+            resize: none;
+            padding: 1rem;
+            background-color: #FAFAFA;
+            height: 5rem;
+            
+        }
+
+        &--button{
+            width: 100%;
+            height: 40px;
+            border: none;
+            border-radius: 4px;
+            font-size: 1rem;
+            background: #0095FF;
+            background-image: url(./assets/Icons/add_comment.svg);
+            background-size: 1.5rem;
+            background-position: center;
+            background-position-x: left;
+            background-repeat: no-repeat;
+            background-position: 1rem;
+            color: #FFFFFF;
+            margin-top: 1rem;
+            &:hover{
+                background: #0065AD;
+                background-image: url(./assets/Icons/add_comment.svg);
+                background-size: 1.5rem;
+                background-position: center;
+                background-position-x: left;
+                background-repeat: no-repeat;
+                background-position: 1rem;
+                color: #FFFFFF;
+                margin-top: 1rem;
+            }
+        }
+    }
+    &__text{
+        margin: 0;
+
+        // &--container{
+        //     // display: flex;
+        // }
+        &--bold{
+            font-weight: 600;
+            
+        }
+
+        &--date{
+            color: #AFAFAF;
+
+        }
+
+    }
+
+    &__comment{
+        display: flex;
+        border-bottom: 2px solid #E1E1E1;
+
+        &--pic{
+            
+
+            &__image{
+            background: #E1E1E1;
+            object-fit: cover;
+            width: 3.125rem;
+            height: 3.125rem;
+            border-radius: 50%;
+            margin: 1rem 1rem 0 0;
+            }
+        }
+
+        &--details{
+            display: flex;
+            justify-content: space-between;
+            
+        }
+
+        &--body__text{
+            margin-top: 0;
+        } 
+    }
+}
+
+
+
+.nextVids{
+    margin: 1rem;
+
+    &__container{
+
+    }
+
+    &__title{
+        font-weight: 500;
+        color: #AFAFAF;
+        margin: 1rem 0rem 0rem;
+    }
+
+    
+
+    &__video{
+        display: flex;
+        &--image{
+            background: #E1E1E1;
+            object-fit: cover;
+            width: 8.5rem;
+            height: 5rem;
+            border-radius: 4px;
+            margin-top: 1rem;
+        }
+
+        &--text{
+            margin-left: 1rem;
+        }
+
+        &--title{
+            // margin: 0;
+            font-weight: 600;
+        }
+        &--author{
+
+        }
+    }
+}
+
+
