@@ -1,8 +1,7 @@
 import './Header.scss';
 
 import bflogo from '../../assets/Logo/BrainFlix-logo.svg';
-// import search from '../../assets/Icons/search.svg';
-// import upload from '../../assets/Icons/upload.svg';
+
 import userPic from '../../assets/Images/Mohan-muruge.jpg';
 
 
