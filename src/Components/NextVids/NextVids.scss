@@ -7,17 +7,26 @@
         margin: 2.25rem;
     }
     @include desktop{
-        margin: 1rem 8rem 0rem;
+        width: 24rem;
+        margin: 2rem 8rem 0rem 0rem;
+        // border-left: solid 2px #E1E1E1;
+        padding-left: 2rem;
+        // flex: 1;
+        // display: flex;
+        // flex-direction: column;
+        // align-content: flex-start;
     }
 
     &__container{
-
+        // margin: 0;
+        // padding: 0;
     }
 
     &__title{
         font-weight: 500;
         color: #AFAFAF;
         margin: 1rem 0rem 0rem;
+        
     }
 
     
@@ -31,10 +40,12 @@
             height: 5rem;
             border-radius: 4px;
             margin-top: 1rem;
+            
         }
 
         &--text{
             margin-left: 1rem;
+            
         }
 
         &--title{

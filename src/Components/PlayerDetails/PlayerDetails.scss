@@ -1,0 +1,152 @@
+@use '../..//Styles/Partials/variables.scss' as *;
+@use '../../Styles/Partials/mixins.scss' as *;
+
+.player{
+    margin: 1rem;
+
+    @include tablet{
+        margin: 2.25rem;
+    }
+    @include desktop{
+        margin: 1rem 0rem 0rem 8rem;
+        // flex: 2;
+    }
+    
+
+    // &__image{
+    //     width: 100%;
+    //     margin: 0;
+    //     padding: 0;
+
+    //     // @include desktop{
+    //     //     margin: 0 8rem 0;
+    //     // }
+
+    //     &--container{
+    //         @include tablet{
+    //             background-size: auto;
+    //             padding: 0rem 2.25rem;
+    //             margin: 0;
+    //             background: black;
+    //         }
+    //         @include desktop{
+    //             padding: 0rem 14rem;
+    //         }
+    //     }
+    // }
+    &__title{
+        @include tablet{
+            font-size: 2.5rem;
+            font-weight: 900;
+            margin-bottom: 0;
+        }
+        @include desktop{
+            font-size: 2rem;
+            margin-right: 2rem;
+        }
+
+    }
+
+    &__details{
+        &--container{
+            display: flex;
+            justify-content: space-between;
+        }
+        // @include desktop{
+        //     margin-right: 2rem;
+        // }
+
+
+        &--left{
+            @include tablet{
+                display: flex;
+                gap: 2rem;
+            }
+            
+        }
+
+        &--right{
+            @include tablet{
+                display: flex;
+                gap: 2rem;
+                // align-items: center;
+            }
+            
+        }
+
+        &--text__author{
+            font-weight: 600;
+
+            @include tablet{
+            }
+        }
+
+        &--text__date{
+            color: #AFAFAF;
+
+            @include tablet{
+            }
+        }
+
+        &--text__likes{
+            margin: 0;
+            color: #AFAFAF;
+
+            @include tablet{
+                margin: 1rem 0;
+            }
+            @include desktop{
+                margin-right: 2rem;
+            }
+        }
+        &--text__views{
+            color: #AFAFAF;
+        }
+
+        &--container{
+            display: flex;
+            border-top: 2px solid #E1E1E1;
+            border-bottom: 2px solid #E1E1E1;
+            gap: 8rem;
+            
+            @include tablet{
+                border-top: none;
+            }
+            
+        }
+    
+        &--right{
+            // display: flex;
+            // flex-direction: row;
+    
+            
+    
+            &__views{
+                display: flex;
+                // flex-direction: column;
+            }
+    
+            &__likes{
+                display: flex;
+                height: 1rem;
+
+                @include tablet{
+                    height: initial;
+                }
+                
+            }
+    
+            &__image{
+                margin-right: 8px;
+                
+                
+            }
+        }
+    }
+
+    &__desc--container{
+        @include desktop{
+            padding-right: 1rem;
+        }
+    }
+}

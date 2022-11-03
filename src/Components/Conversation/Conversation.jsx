@@ -1,6 +1,11 @@
 import './Conversation.scss';
 
 import userPic from '../../assets/Images/Mohan-muruge.jpg';
+import videoDetailsMain from '../../assets/Data/video-details.json'
+
+
+
+
 
 function Conversation () {
     return(
@@ -29,11 +34,11 @@ function Conversation () {
         </div>
         <div className='conversation__text'>
           <div className='conversation__comment--details'>
-            <p className='conversation__text--bold'>Micheal Lyons</p>
-            <p className='conversation__text--date'>08/09/2021</p>
+            <p className='conversation__text--bold'>{videoDetailsMain[0].comments[0].name}</p>
+            <p className='conversation__text--date'>{videoDetailsMain[0].comments[0].timestamp}</p>
           </div>
           <div className='conversation__comment--body'>
-            <p className='conversation__comment--body__text'>They BLEW the ROOF off at their last event, once everyone started figuring out they were going. This is still simply the greatest opening of an event I have EVER witnessed.</p>
+            <p className='conversation__comment--body__text'>{videoDetailsMain[0].comments[0].comment}</p>
           </div>
         </div>
       </article>
@@ -43,11 +48,11 @@ function Conversation () {
         </div>
         <div className='conversation__text'>
           <div className='conversation__comment--details'>
-            <p className='conversation__text--bold'>Micheal Lyons</p>
-            <p className='conversation__text--date'>08/09/2021</p>
+            <p className='conversation__text--bold'>{videoDetailsMain[0].comments[1].name}</p>
+            <p className='conversation__text--date'>{videoDetailsMain[0].comments[1].timestamp}</p>
           </div>
           <div className='conversation__comment--body'>
-            <p className='conversation__comment--body__text'>They BLEW the ROOF off at their last event, once everyone started figuring out they were going. This is still simply the greatest opening of an event I have EVER witnessed.</p>
+            <p className='conversation__comment--body__text'>{videoDetailsMain[0].comments[1].comment}</p>
           </div>
         </div>
       </article>

@@ -11,7 +11,7 @@
     // padding: 0 1rem;
     // flex-basis: 100%;
     @include desktop{
-        margin: 1rem 8rem 0rem;
+        margin: 1rem 0rem 0rem 8rem;
     }
     
 
@@ -19,6 +19,7 @@
         display: flex;
         padding-bottom: 1rem;
         border-bottom: 2px solid #E1E1E1;
+        padding-right: 2rem;
 
         &--pic{
             background: grey;
@@ -140,6 +141,11 @@
     &__comment{
         display: flex;
         border-bottom: 2px solid #E1E1E1;
+
+        @include desktop{
+            padding: 1rem 2rem 1rem 0rem;
+        }
+        
 
         &--pic{
             

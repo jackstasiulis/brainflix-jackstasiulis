@@ -16,6 +16,17 @@ body{
     color: #323232;
 }
 
+.desktopSplit{
+    @include desktop{
+        display: flex;
+
+    &__left{
+        border-right: solid 2px #E1E1E1;
+    }
+ 
+    }
+}
+
 
 
 // .header{
