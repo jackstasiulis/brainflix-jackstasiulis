@@ -1,5 +1,7 @@
 import './Conversation.scss';
 
+import ConvoComment from './ConvoComment/ConvoComment';
+
 import userPic from '../../assets/Images/Mohan-muruge.jpg';
 import videoDetailsMain from '../../assets/Data/video-details.json'
 
@@ -7,10 +9,10 @@ import videoDetailsMain from '../../assets/Data/video-details.json'
 
 
 
-function Conversation () {
+function Conversation (props) {
     return(
 
-<body>
+<div>
     <section className='conversation'>
       <p className='conversation__text--bold'>3 Comments</p>
       <div className='conversation__form'>
@@ -28,37 +30,26 @@ function Conversation () {
         </div>
       </div>
 
-      <article className='conversation__comment'>
-        <div className='conversation__comment--pic'>
-          <img className='conversation__comment--pic__image' src="" alt="" />
-        </div>
-        <div className='conversation__text'>
-          <div className='conversation__comment--details'>
-            <p className='conversation__text--bold'>{videoDetailsMain[0].comments[0].name}</p>
-            <p className='conversation__text--date'>{videoDetailsMain[0].comments[0].timestamp}</p>
-          </div>
-          <div className='conversation__comment--body'>
-            <p className='conversation__comment--body__text'>{videoDetailsMain[0].comments[0].comment}</p>
-          </div>
-        </div>
-      </article>
-      <article className='conversation__comment'>
-        <div className='conversation__comment--pic'>
-          <img className='conversation__comment--pic__image' src="" alt="" />
-        </div>
-        <div className='conversation__text'>
-          <div className='conversation__comment--details'>
-            <p className='conversation__text--bold'>{videoDetailsMain[0].comments[1].name}</p>
-            <p className='conversation__text--date'>{videoDetailsMain[0].comments[1].timestamp}</p>
-          </div>
-          <div className='conversation__comment--body'>
-            <p className='conversation__comment--body__text'>{videoDetailsMain[0].comments[1].comment}</p>
-          </div>
-        </div>
-      </article>
+      
+      {
+      props.activeVid.comments.map((vidComment) => (
+        <ConvoComment 
+        key={vidComment.id}
+        id={vidComment.id}
+        name={vidComment.name}
+        comment={vidComment.comment}
+        likes={vidComment.likes}
+        timestamp={props.dateParser(vidComment.timestamp)}
+        
+
+        // activeVid = {props.activeVid} 
+        // updateActiveVid = {props.updateActiveVid}
+        />
+      ))
+      }
     </section>
-</body>  
-    )
+</div>  
+    );
 }
 
 export default Conversation;

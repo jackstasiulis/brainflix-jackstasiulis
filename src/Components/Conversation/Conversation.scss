@@ -19,8 +19,11 @@
         display: flex;
         padding-bottom: 1rem;
         border-bottom: 2px solid #E1E1E1;
-        padding-right: 2rem;
-
+        @include desktop{
+            padding-right: 2rem;
+            border-bottom: none;
+        }
+        
         &--pic{
             background: grey;
             object-fit: cover;
@@ -138,36 +141,36 @@
 
     }
 
-    &__comment{
-        display: flex;
-        border-bottom: 2px solid #E1E1E1;
+    // &__comment{
+    //     display: flex;
+    //     border-bottom: 2px solid #E1E1E1;
 
-        @include desktop{
-            padding: 1rem 2rem 1rem 0rem;
-        }
+    //     @include desktop{
+    //         padding: 1rem 2rem 1rem 0rem;
+    //     }
         
 
-        &--pic{
+    //     &--pic{
             
 
-            &__image{
-            background: #E1E1E1;
-            object-fit: cover;
-            width: 3.125rem;
-            height: 3.125rem;
-            border-radius: 50%;
-            margin: 1rem 1rem 0 0;
-            }
-        }
+    //         &__image{
+    //         background: #E1E1E1;
+    //         object-fit: cover;
+    //         width: 3.125rem;
+    //         height: 3.125rem;
+    //         border-radius: 50%;
+    //         margin: 1rem 1rem 0 0;
+    //         }
+    //     }
 
-        &--details{
-            display: flex;
-            justify-content: space-between;
+    //     &--details{
+    //         display: flex;
+    //         justify-content: space-between;
             
-        }
+    //     }
 
-        &--body__text{
-            margin-top: 0;
-        } 
-    }
+    //     &--body__text{
+    //         margin-top: 0;
+    //     } 
+    // }
 }

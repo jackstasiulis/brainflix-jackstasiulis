@@ -1,41 +1,26 @@
 import './NextVids.scss';
-
-import videoDetailsSmall from '../../assets/Data/videos.json'
-
-const renderNextVids = () => {
-    for(let i = 0; i <= videoDetailsSmall.length; i++){
-        return videoDetailsSmall[i];
-    }
-}
-
-console.log(renderNextVids);
+import Thumbnail from './Thumbnail/Thumbnail';
 
 
-function NextVids () {
+function NextVids (props) {
     return(
 
     <section className='nextVids'>
         <p className='nextVids__title'>NEXT VIDEOS</p>
         <div className='nextVids__container'>
-            
-            <div className='nextVids__video'>
-            <div>
-                <img className='nextVids__video--image' src={videoDetailsSmall[1].image} alt="" />
-            </div>
-            <div className='nextVids__video--text'>
-                <p className='nextVids__video--title'>{videoDetailsSmall[1].title}</p>
-                <p className='nextVids__video--author'>{videoDetailsSmall[1].channel}</p>
-            </div>
-            </div>
-            <div className='nextVids__video'>
-            <div>
-                <img className='nextVids__video--image' src={videoDetailsSmall[2].image} alt="" />
-            </div>
-            <div className='nextVids__video--text'>
-                <p className='nextVids__video--title'>{videoDetailsSmall[2].title}</p>
-                <p className='nextVids__video--author'>{videoDetailsSmall[2].channel}</p>
-            </div>
-            </div>
+           {
+            props.videoListDetails.filter(singleVid => singleVid.id !== props.activeVid.id).map((singleVid) => (
+                <Thumbnail 
+                key={singleVid.id}
+                id={singleVid.id}
+                image={singleVid.image}
+                title={singleVid.title}
+                channel={singleVid.channel}
+
+                updateActiveVid = {props.updateActiveVid}
+                />
+            ))
+           }
         </div>
     </section>
     );

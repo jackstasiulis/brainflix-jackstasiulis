@@ -1,0 +1,42 @@
+@use '../../../Styles/Partials/variables.scss' as *;
+@use '../../../Styles/Partials/mixins.scss' as *;
+
+.conversation{
+&__comment{
+    display: flex;
+    border-bottom: 2px solid #E1E1E1;
+
+    @include desktop{
+        padding: 1rem 2rem 1rem 0rem;
+        border-top: 2px solid #E1E1E1;
+        border-bottom: none;
+        
+    }
+    
+
+    &--pic{
+        
+
+        &__image{
+        background: #E1E1E1;
+        background-image: url(../../../assets/Images/coolDued.png);
+        background-size: cover;
+        object-fit: cover;
+        width: 3.125rem;
+        height: 3.125rem;
+        border-radius: 50%;
+        margin: 1rem 1rem 0 0;
+        }
+    }
+
+    &--details{
+        display: flex;
+        justify-content: space-between;
+        
+    }
+
+    &--body__text{
+        margin-top: 0;
+    } 
+}
+}
