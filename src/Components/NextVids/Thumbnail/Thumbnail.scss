@@ -1,0 +1,32 @@
+@use '../../../Styles/Partials/variables.scss' as *;
+@use '../../../Styles/Partials/mixins.scss' as *;
+
+.nextVids{
+    
+&__title{
+        font-weight: 500;
+        color: #AFAFAF;
+        margin: 1rem 0rem 0rem;
+    }
+
+    &__video{
+        display: flex;
+        &--image{
+            background: #E1E1E1;
+            object-fit: cover;
+            width: 8.5rem;
+            height: 5rem;
+            border-radius: 4px;
+            margin-top: 1rem;
+        }
+
+        &--text{
+            margin-left: 1rem;
+        }
+
+        &--title{
+            font-weight: 600;
+        }
+    }
+
+}

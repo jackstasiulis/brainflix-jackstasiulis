@@ -11,29 +11,7 @@
         margin: 1rem 0rem 0rem 8rem;
         // flex: 2;
     }
-    
 
-    // &__image{
-    //     width: 100%;
-    //     margin: 0;
-    //     padding: 0;
-
-    //     // @include desktop{
-    //     //     margin: 0 8rem 0;
-    //     // }
-
-    //     &--container{
-    //         @include tablet{
-    //             background-size: auto;
-    //             padding: 0rem 2.25rem;
-    //             margin: 0;
-    //             background: black;
-    //         }
-    //         @include desktop{
-    //             padding: 0rem 14rem;
-    //         }
-    //     }
-    // }
     &__title{
         @include tablet{
             font-size: 2.5rem;
@@ -52,10 +30,6 @@
             display: flex;
             justify-content: space-between;
         }
-        // @include desktop{
-        //     margin-right: 2rem;
-        // }
-
 
         &--left{
             @include tablet{
@@ -69,7 +43,6 @@
             @include tablet{
                 display: flex;
                 gap: 2rem;
-                // align-items: center;
             }
             
         }
@@ -116,14 +89,9 @@
         }
     
         &--right{
-            // display: flex;
-            // flex-direction: row;
-    
-            
     
             &__views{
                 display: flex;
-                // flex-direction: column;
             }
     
             &__likes{
@@ -133,13 +101,10 @@
                 @include tablet{
                     height: initial;
                 }
-                
             }
     
             &__image{
                 margin-right: 8px;
-                
-                
             }
         }
     }

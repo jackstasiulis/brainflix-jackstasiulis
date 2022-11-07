@@ -1,8 +1,5 @@
 import './Thumbnail.scss';
 
-
-import videoList from '../../../assets/Data/videos.json'
-
 function Thumbnail (props) {
 
     const clickHandler = () => {

@@ -1,7 +1,5 @@
 import './ConvoComment.scss';
 
-import videoDetailsMain from '../../../assets/Data/video-details.json';
-
 
 function ConvoComment (props) {
 

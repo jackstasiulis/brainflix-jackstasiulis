@@ -11,9 +11,6 @@ import videoDetailsMain from './assets/Data/video-details.json';
 import videoList from './assets/Data/videos.json';
 import { useState } from 'react';
 import { dateParser } from './Utilities/DateParser';
-// import { dateParser } from './Utilities/DateParser';
-
-
 
 
 function App() {
@@ -27,9 +24,6 @@ function App() {
     const foundVid = (videoDetailsMain.find((video) => video.id === id))
     setActiveVid(foundVid)
 
-    // const filteredVid = (videoListDetails.filter((video) => video.id !== id))
-    // // setVideoListDetails(filteredVid)
-    // console.log(filteredVid)
   }
 
 

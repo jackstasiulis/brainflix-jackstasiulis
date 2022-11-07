@@ -3,11 +3,6 @@ import './Conversation.scss';
 import ConvoComment from './ConvoComment/ConvoComment';
 
 import userPic from '../../assets/Images/Mohan-muruge.jpg';
-import videoDetailsMain from '../../assets/Data/video-details.json'
-
-
-
-
 
 function Conversation (props) {
     return(
@@ -29,7 +24,6 @@ function Conversation (props) {
           </div>
         </div>
       </div>
-
       
       {
       props.activeVid.comments.map((vidComment) => (
@@ -40,10 +34,6 @@ function Conversation (props) {
         comment={vidComment.comment}
         likes={vidComment.likes}
         timestamp={props.dateParser(vidComment.timestamp)}
-        
-
-        // activeVid = {props.activeVid} 
-        // updateActiveVid = {props.updateActiveVid}
         />
       ))
       }

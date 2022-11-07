@@ -11,14 +11,12 @@
     @include tablet{
         margin: 1rem 2.25rem 0rem;
         flex-direction: row;
-        
-        // background: red;
     }
+
     @include desktop{
         margin: 1rem 8rem 0rem;
     }
    
-
     &__logo{
         width: 10rem;
         height: auto;
@@ -28,7 +26,6 @@
             margin-top: 1rem;
             padding-right: 1rem;
         }
-
     }
 
     &__items{
@@ -54,7 +51,6 @@
 
             @include tablet{
                 width: 70%;
-                // margin-left: 8rem;
             }
             @include desktop{
                 width: 45%;
@@ -68,7 +64,6 @@
             height: 50px;
             border-radius: 50%;
             
-
             @include tablet{
                 margin-right: 2.25rem;
                 position: absolute;
@@ -100,8 +95,6 @@
             padding-left: 1rem;
         }
 
-        
-
         &--container{
             width: 100%;
             margin: 1rem;
@@ -111,7 +104,6 @@
                 width: 50%;
             }
             @include desktop{
-                // margin-right: 5rem;
                 width: 30%;
             }
         }

@@ -9,8 +9,6 @@ function PlayerDetails(props) {
     return (
 
         <div>  
-            
-
             <div className='player'>
             
             <div className='player__title--container'>

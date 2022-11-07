@@ -9,51 +9,6 @@
     @include desktop{
         width: 24rem;
         margin: 2rem 8rem 0rem 0rem;
-        // border-left: solid 2px #E1E1E1;
         padding-left: 2rem;
-        // flex: 1;
-        // display: flex;
-        // flex-direction: column;
-        // align-content: flex-start;
-    }
-
-    &__container{
-        // margin: 0;
-        // padding: 0;
-    }
-
-    &__title{
-        font-weight: 500;
-        color: #AFAFAF;
-        margin: 1rem 0rem 0rem;
-        
-    }
-
-    
-
-    &__video{
-        display: flex;
-        &--image{
-            background: #E1E1E1;
-            object-fit: cover;
-            width: 8.5rem;
-            height: 5rem;
-            border-radius: 4px;
-            margin-top: 1rem;
-            
-        }
-
-        &--text{
-            margin-left: 1rem;
-            
-        }
-
-        &--title{
-            // margin: 0;
-            font-weight: 600;
-        }
-        &--author{
-
-        }
     }
 }
