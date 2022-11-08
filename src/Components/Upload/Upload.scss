@@ -1,0 +1,134 @@
+@use '../..//Styles/Partials/variables.scss' as *;
+@use '../../Styles/Partials/mixins.scss' as *;
+
+.upload{
+    border-top: solid 2px #E1E1E1;
+    margin: 0;
+    padding: 0;
+
+    &__form{
+        margin: 1rem;
+        padding-bottom: 1rem;
+        
+        @include tablet{
+            margin: 2.25rem;
+        }
+        @include desktop{
+            margin: 1rem 0rem 0rem 8rem;
+            padding-right: 2rem;
+        }
+    }
+
+    &__title{
+        font-size: 2rem;
+
+        @include tablet{
+            padding-bottom: 3rem;
+            border-bottom: solid #E1E1E1 2px;
+        }
+    }
+
+    &__subtitle{
+        font-weight: 500;
+        color: #AFAFAF;
+
+        @include tablet{
+            margin-bottom: 0.5rem;
+        }
+    }
+
+    &__image{
+        border-radius: 5px;
+        max-width: 100%;
+    }
+
+    &__input{
+        width: 100%;
+        font-size: 1rem;
+        font-family: inherit;
+        font-size: 1rem;
+        border-color: #E1E1E1;
+        border-style: solid;
+        border-radius: 5px;
+        padding: 1rem 1rem;
+        background-color: #FAFAFA;
+
+        @include tablet{
+            width: 100%;
+        }
+        @include desktop{
+            width: 45%;
+        }
+    }
+
+    &__textBox{
+        font-size: 1rem;
+        font-family: inherit;
+        color: #323232;
+        border-color: #E1E1E1;
+        border-style: solid;
+        border-radius: 5px;
+        resize: none;
+        padding: 1rem;
+        background-color: #FAFAFA;
+        height: 5rem;
+        width: 100%;
+    }
+
+    &__button--container{
+
+        @include tablet{
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            border-top: #E1E1E1 2px solid;
+            margin-top: 1rem;
+        }
+        
+    }
+
+    &__publish{
+        width: 100%;
+        height: 50px;
+        border: none;
+        border-radius: 4px;
+        font-size: 1rem;
+        background: #0095FF;
+        background-image: url(../../assets/Icons/publish.svg);
+        background-size: 2rem;
+        background-position: center;
+        background-position-x: left;
+        background-repeat: no-repeat;
+        background-position: 1rem;
+        color: #FFFFFF;
+        margin-top: 1rem;
+        &:hover{
+            background: #0065AD;
+            background-image: url(../../assets/Icons/publish.svg);
+            background-size: 2rem;
+            background-position: center;
+            background-position-x: left;
+            background-repeat: no-repeat;
+            background-position: 1rem;
+            color: #FFFFFF;
+        }
+        @include tablet{
+            width: 25%;
+        }
+    }
+    &__cancel{
+        width: 100%;
+        height: 50px;
+        border: none;
+        color: #0095FF;
+        background: none;
+        font-size: 1rem;
+        margin-top: 1rem;
+        &:hover{
+            color: #0065AD;
+        }
+        @include tablet{
+            width: 25%;
+        }
+    }
+}

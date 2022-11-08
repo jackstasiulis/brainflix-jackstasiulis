@@ -1,5 +1,5 @@
 import './NextVids.scss';
-import Thumbnail from './Thumbnail/Thumbnail';
+import SideVid from './SideVid/SideVid';
 
 
 function NextVids (props) {
@@ -10,7 +10,7 @@ function NextVids (props) {
         <div className='nextVids__container'>
            {
             props.videoListDetails.filter(singleVid => singleVid.id !== props.activeVid.id).map((singleVid) => (
-                <Thumbnail 
+                <SideVid 
                 key={singleVid.id}
                 id={singleVid.id}
                 image={singleVid.image}

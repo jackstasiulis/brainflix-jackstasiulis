@@ -1,6 +1,6 @@
-import './Thumbnail.scss';
+import './SideVid.scss';
 
-function Thumbnail (props) {
+function SideVid (props) {
 
     const clickHandler = () => {
         props.updateActiveVid(props.id);
@@ -19,4 +19,4 @@ function Thumbnail (props) {
         );
 }
 
-export default Thumbnail;
+export default SideVid;

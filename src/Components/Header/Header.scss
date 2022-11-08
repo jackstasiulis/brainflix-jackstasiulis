@@ -90,6 +90,16 @@
         background-repeat: no-repeat;
         background-position: 1rem;
         color: #FFFFFF;
+        &:hover{
+            background: #0065AD;
+            background-image: url(../../assets/Icons/upload.svg);
+            background-size: 2rem;
+            background-position: center;
+            background-position-x: left;
+            background-repeat: no-repeat;
+            background-position: 1rem;
+            color: #FFFFFF;
+        }
 
         @include tablet{
             padding-left: 1rem;
