@@ -14,8 +14,8 @@
             margin: 2.25rem;
         }
         @include desktop{
-            margin: 1rem 0rem 0rem 8rem;
-            padding-right: 2rem;
+            margin: 2rem 8rem;
+            // padding-right: 2rem;
         }
     }
 
@@ -40,6 +40,18 @@
     &__image{
         border-radius: 5px;
         max-width: 100%;
+        @include tablet{
+            width: 50%;
+        }
+        @include desktop{
+            width: 100%;
+        }
+        &--container{
+            @include desktop{
+                width: 35%;
+                margin-right: 2rem;
+            }
+        }
     }
 
     &__input{
@@ -57,8 +69,12 @@
             width: 100%;
         }
         @include desktop{
-            width: 45%;
+            width: 100%;
+            &--container{
+                width: 65%;
+            }
         }
+        
     }
 
     &__textBox{
@@ -73,14 +89,17 @@
         background-color: #FAFAFA;
         height: 5rem;
         width: 100%;
+        @include desktop{
+            height: 5.4rem;
+        }
     }
 
     &__button--container{
 
         @include tablet{
             display: flex;
-            flex-direction: row;
-            justify-content: flex-end;
+            flex-direction: row-reverse;
+            justify-content: flex-start;
             border-top: #E1E1E1 2px solid;
             margin-top: 1rem;
         }
@@ -114,6 +133,7 @@
         }
         @include tablet{
             width: 25%;
+            margin-left: 4rem;
         }
     }
     &__cancel{
@@ -129,6 +149,11 @@
         }
         @include tablet{
             width: 25%;
+        }
+    }
+    &__desktop--container{
+        @include desktop{
+            display: flex;
         }
     }
 }
