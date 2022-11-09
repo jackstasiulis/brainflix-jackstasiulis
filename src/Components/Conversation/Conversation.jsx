@@ -26,7 +26,7 @@ function Conversation (props) {
       </div>
       
       {
-      props.activeVid.comments.map((vidComment) => (
+      props.activeVid?.comments?.map((vidComment) => (
         <ConvoComment 
         key={vidComment.id}
         id={vidComment.id}
