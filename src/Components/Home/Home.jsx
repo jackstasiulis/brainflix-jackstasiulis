@@ -9,6 +9,8 @@ import videoList from '../../assets/Data/videos.json';
 import { useState } from 'react';
 import { dateParser } from '../../Utilities/DateParser';
 
+import { useEffect } from 'react';
+
 function Home() {
 
     const[activeVid, setActiveVid] = useState(videoDetailsMain[0]);
@@ -19,8 +21,22 @@ function Home() {
     const updateActiveVid = (id) => {
       const foundVid = (videoDetailsMain.find((video) => video.id === id))
       setActiveVid(foundVid)
-  
     }
+
+
+
+    const [videoDataMain, setVideoDataMain] = useState([]);
+    
+    useEffect(()=> {
+      console.log('video main mounted?')
+    })
+
+
+
+
+
+
+
   
   
     return (

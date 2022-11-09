@@ -1,5 +1,7 @@
 import './NextVids.scss';
 import SideVid from './SideVid/SideVid';
+import { Link } from 'react-router-dom';
+
 
 
 function NextVids (props) {
@@ -10,6 +12,7 @@ function NextVids (props) {
         <div className='nextVids__container'>
            {
             props.videoListDetails.filter(singleVid => singleVid.id !== props.activeVid.id).map((singleVid) => (
+                <Link to={`/videos/${singleVid.id}`} >
                 <SideVid 
                 key={singleVid.id}
                 id={singleVid.id}
@@ -19,6 +22,7 @@ function NextVids (props) {
 
                 updateActiveVid = {props.updateActiveVid}
                 />
+                </Link>
             ))
            }
         </div>

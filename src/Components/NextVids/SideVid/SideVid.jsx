@@ -1,4 +1,5 @@
 import './SideVid.scss';
+import { Link } from 'react-router-dom';
 
 function SideVid (props) {
 
@@ -8,6 +9,7 @@ function SideVid (props) {
         return(
 
     <div onClick={() => {clickHandler()}} className='nextVids__video'>
+        
         <div>
             <img className='nextVids__video--image' src={props.image} alt="" />
         </div>
@@ -15,6 +17,7 @@ function SideVid (props) {
             <p className='nextVids__video--title'>{props.title}</p>
             <p className='nextVids__video--author'>{props.channel}</p>
         </div>
+        
     </div>
         );
 }
