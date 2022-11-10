@@ -23,8 +23,9 @@ function Upload () {
             </div>
 
                 <div className="upload__button--container">
-                    <button className="upload__publish">PUBLISH</button>
-                    <Link to={`/Home`} ><button className="upload__cancel">CANCEL</button></Link>
+                    {/* <Link to={`/Home`}><button onClick={alert} className="upload__publish">PUBLISH</button></Link> */}
+                    <button onClick={alert} className="upload__publish">PUBLISH</button>
+                    <Link to={`/Home`}><button className="upload__cancel">CANCEL</button></Link>
                     
                     
                 </div>

@@ -18,31 +18,50 @@ function Home() {
  
     const {id} = useParams();
     
-    useEffect(()=> {
-      console.log('video main mounted?');
 
-      axios
-        .get(`https://project-2-api.herokuapp.com/videos/${id}?api_key=<0e5174a0-d772-40a4-9218-ad902e35564f>`)
+/**
+ * function to setting a single video object in state. 
+ * @param {string} videoId 
+ */
+
+  function mainVideoRequest (videoId) {
+    axios
+        .get(`https://project-2-api.herokuapp.com/videos/${videoId}?api_key=<0e5174a0-d772-40a4-9218-ad902e35564f>`)
         .then(response => {
           console.log('main api accessed??')
           setActiveVid(response.data)
           console.log(response.data)
         }).catch((error) => console.log(error));
-    }, [id]);
+  }
 
-
-    useEffect(()=> {
-      console.log('video side mounted?');
-
-      axios
+  /**
+   * function to load the side list of videos
+   */
+  function sideVideoRequest () {
+    axios
         .get(`https://project-2-api.herokuapp.com/videos/?api_key=<0e5174a0-d772-40a4-9218-ad902e35564f>`)
         .then(response => {
           console.log('side api accessed??')
           console.log(response.data)
           setVideoListDetails(response.data)
+          if(!id){
+            mainVideoRequest(response.data[0].id)
+          }
         }).catch((error) => console.log(error));
+  }
+
+    useEffect(()=> {
+      console.log('video main mounted?');
+        mainVideoRequest(id);
+    }, [id]);
+
+      
+    useEffect(()=> {
+      console.log('video side mounted?');
+        sideVideoRequest();
     }, []);
   
+
     return (
       <main>
   
