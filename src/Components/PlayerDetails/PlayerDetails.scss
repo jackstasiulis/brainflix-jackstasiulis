@@ -9,7 +9,6 @@
     }
     @include desktop{
         margin: 1rem 0rem 0rem 8rem;
-        // flex: 2;
     }
 
     &__title{
@@ -22,7 +21,6 @@
             font-size: 2rem;
             margin-right: 2rem;
         }
-
     }
 
     &__details{
@@ -36,7 +34,6 @@
                 display: flex;
                 gap: 2rem;
             }
-            
         }
 
         &--right{
@@ -44,7 +41,6 @@
                 display: flex;
                 gap: 2rem;
             }
-            
         }
 
         &--text__author{

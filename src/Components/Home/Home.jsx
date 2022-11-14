@@ -10,12 +10,12 @@ import { useParams } from 'react-router-dom';
 import { useEffect } from 'react';
 import axios from "axios";
 
+
 function Home() {
 
     const[activeVid, setActiveVid] = useState([]);
     const[videoListDetails, setVideoListDetails] = useState([]);
 
- 
     const {id} = useParams();
     
 
@@ -54,7 +54,6 @@ function Home() {
       console.log('video main mounted?');
         mainVideoRequest(id);
     }, [id]);
-
       
     useEffect(()=> {
       console.log('video side mounted?');

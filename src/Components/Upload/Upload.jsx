@@ -1,5 +1,4 @@
 import './Upload.scss';
-import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 
 import thumbnail from "../../assets/Images/Upload-video-preview.jpg";
@@ -52,5 +51,3 @@ const cancelNav = (event) => {
 }
 
 export default Upload;
-
-// onClick={()=>{alert('wow')}}

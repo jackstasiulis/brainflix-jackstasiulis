@@ -1,5 +1,4 @@
 import './SideVid.scss';
-import { Link } from 'react-router-dom';
 
 function SideVid (props) {
 

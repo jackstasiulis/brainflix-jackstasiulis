@@ -3,15 +3,14 @@ import SideVid from './SideVid/SideVid';
 import { Link } from 'react-router-dom';
 
 
-
-function NextVids (props) {
+function NextVids (props, activeVid, updateActiveVid) {
     return(
 
     <section className='nextVids'>
         <p className='nextVids__title'>NEXT VIDEOS</p>
         <div className='nextVids__container'>
            {
-            props.videoListDetails?.filter(singleVid => singleVid.id !== props.activeVid.id).map((singleVid) => (
+            props.videoListDetails?.filter(singleVid => singleVid.id !== activeVid.id).map((singleVid) => (
                 <Link to={`/videos/${singleVid.id}`} >
                 <SideVid 
                 key={singleVid.id}
@@ -20,7 +19,7 @@ function NextVids (props) {
                 title={singleVid.title}
                 channel={singleVid.channel}
 
-                updateActiveVid = {props.updateActiveVid}
+                updateActiveVid = {updateActiveVid}
                 />
                 </Link>
             ))

@@ -1,5 +1,6 @@
 import './Player.scss';
 
+// ==================== Structure for main video window ==================== //
 
 function Player(props) {
     return (
