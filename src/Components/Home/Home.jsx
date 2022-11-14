@@ -69,7 +69,7 @@ function Home() {
       <div className='desktopSplit'>
           <div className='desktopSplit__left'>
             <PlayerDetails activeVid = {activeVid} dateParser = {dateParser} />
-            <Conversation activeVid = {activeVid} dateParser = {dateParser} />
+            <Conversation id={activeVid.id} activeVid = {activeVid} dateParser = {dateParser} mainVideoRequest={mainVideoRequest}/>
           </div>
           <div className='desktopSplit__right'>
             <NextVids videoListDetails = {videoListDetails} activeVid = {activeVid} />

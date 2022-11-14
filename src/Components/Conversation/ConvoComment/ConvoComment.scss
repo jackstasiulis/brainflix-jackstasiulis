@@ -35,5 +35,14 @@
         &--body__text{
             margin-top: 0;
         } 
+        &--delete{
+            border: none;
+            border-radius: 3px;
+            color: #FFFFFF;
+            background: #0095FF;
+            &:hover{
+                background: #0065AD;
+            }
+        }
     }
 }

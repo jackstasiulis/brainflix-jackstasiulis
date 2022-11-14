@@ -1,9 +1,27 @@
+import axios from 'axios';
 import './ConvoComment.scss';
 
 
 function ConvoComment (props) {
 
-
+const handleDeleteComment = (event) => {
+    event.preventDefault();
+    if(!props.videoId){
+        props.videoId = ('84e96018-4022-434e-80bf-000ce4cd12b8');
+      }
+    // if(event.target.comment.value === ''){
+    //     alert('pleaseplaesss');
+    //     return;
+    // }
+    axios
+        .delete(`https://project-2-api.herokuapp.com/videos/${props.videoId}/comments/${props.id}?api_key=<0e5174a0-d772-40a4-9218-ad902e35564f>`)
+        .then(() => {
+            props.mainVideoRequest(props.videoId)
+            
+        }
+            
+        )
+}
     
     return(
 
@@ -19,6 +37,7 @@ function ConvoComment (props) {
         <div className='conversation__comment--body'>
             <p className='conversation__comment--body__text'>{props.comment}</p>
         </div>
+            <button className='conversation__comment--delete' onClick={handleDeleteComment} >Delete</button>
         </div>
     </article>
 
@@ -26,6 +45,3 @@ function ConvoComment (props) {
 }
 
 export default ConvoComment;
-
-
-
