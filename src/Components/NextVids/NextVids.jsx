@@ -1,5 +1,5 @@
 import './NextVids.scss';
-import SideVid from './SideVid/SideVid';
+import SideVid from '../SideVid/SideVid';
 import { Link } from 'react-router-dom';
 
 

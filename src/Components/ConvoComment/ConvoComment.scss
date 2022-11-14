@@ -1,5 +1,5 @@
-@use '../../../Styles/Partials/variables.scss' as *;
-@use '../../../Styles/Partials/mixins.scss' as *;
+@use '../../Styles/Partials/variables.scss' as *;
+@use '../../Styles/Partials/mixins.scss' as *;
 
 .conversation{
 
@@ -17,7 +17,7 @@
             
             &__image{
             background: #E1E1E1;
-            background-image: url(../../../assets/Images/coolDued.png);
+            background-image: url(../../assets/Images/coolDued.png);
             background-size: cover;
             object-fit: cover;
             width: 3.125rem;

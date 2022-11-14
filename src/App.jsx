@@ -2,7 +2,7 @@ import './App.scss';
 
 import { BrowserRouter, Routes, Route} from 'react-router-dom'
 
-import Header from './Components/Header/Header';
+import PageHeader from './Components/PageHeader/PageHeader';
 import Home from './Components/Home/Home'
 import Upload from './Components/Upload/Upload';
 
@@ -12,7 +12,7 @@ function App() {
   return (
     <BrowserRouter>
       <main>
-        <Header />
+        <PageHeader />
         <Routes>
 
           <Route path='/' element={<Home />} />

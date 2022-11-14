@@ -1,16 +1,13 @@
 import './Conversation.scss';
 
-import ConvoComment from './ConvoComment/ConvoComment';
+import ConvoComment from '../ConvoComment/ConvoComment';
 
 import userPic from '../../assets/Images/Mohan-muruge.jpg';
 
 import axios from 'axios';
 
 
-function Conversation (id, mainVideoRequest, activeVid, dateParser) {
-
-
-// ==================== Post comment function ==================== //
+function Conversation (props) {
 
 const handlePostComment = (event) => {
   event.preventDefault();
@@ -25,9 +22,9 @@ const handlePostComment = (event) => {
   }
   console.log(newComment)
     axios
-      .post(`https://project-2-api.herokuapp.com/videos/${id}/comments?api_key=<0e5174a0-d772-40a4-9218-ad902e35564f>`, newComment)
+      .post(`https://project-2-api.herokuapp.com/videos/${props.id}/comments?api_key=<0e5174a0-d772-40a4-9218-ad902e35564f>`, newComment)
       .then(() => {
-        mainVideoRequest(id);
+        props.mainVideoRequest(props.id);
       }
       )
     }
@@ -35,7 +32,7 @@ const handlePostComment = (event) => {
     return(
       <div>
           <section className='conversation'>
-            <p className='conversation__text--bold'>{activeVid?.comments?.length} Comments</p>
+            <p className='conversation__text--bold'>{props.activeVid.comments?.length} Comments</p>
             <form className='conversation__form' onSubmit={handlePostComment}>
               <div className='conversation__form--pic__container'>
                 <img className='conversation__form--pic' src={userPic} alt="" />
@@ -52,18 +49,18 @@ const handlePostComment = (event) => {
             </form>
             
             {
-            activeVid?.comments?.map((vidComment) => (
+            props.activeVid?.comments?.map((vidComment) => (
               <ConvoComment 
-              videoId={id}
+              videoId={props.id}
 
               key={vidComment.id}
               id={vidComment.id}
               name={vidComment.name}
               comment={vidComment.comment}
               likes={vidComment.likes}
-              timestamp={dateParser(vidComment.timestamp)}
+              timestamp={props.dateParser(vidComment.timestamp)}
               
-              mainVideoRequest={mainVideoRequest}
+              mainVideoRequest={props.mainVideoRequest}
               />
             ))
             }

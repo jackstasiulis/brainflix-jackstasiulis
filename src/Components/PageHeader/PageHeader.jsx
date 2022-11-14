@@ -1,4 +1,4 @@
-import './Header.scss';
+import './PageHeader.scss';
 
 import bflogo from '../../assets/Logo/BrainFlix-logo.svg';
 import userPic from '../../assets/Images/Mohan-muruge.jpg';
@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 
 
-function Header() {
+function PageHeader() {
 
     const myNav = useNavigate();
 
@@ -32,4 +32,4 @@ function Header() {
     );
 }
 
-export default Header;
+export default PageHeader;
