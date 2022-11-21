@@ -26,11 +26,9 @@ function Home() {
 
   function mainVideoRequest (videoId) {
     axios
-        .get(`https://project-2-api.herokuapp.com/videos/${videoId}?api_key=<0e5174a0-d772-40a4-9218-ad902e35564f>`)
+        .get(`http://localhost:5002/videos/${videoId}`)
         .then(response => {
-          console.log('main api accessed??')
           setActiveVid(response.data)
-          console.log(response.data)
         }).catch((error) => console.log(error));
   }
 
@@ -39,10 +37,8 @@ function Home() {
    */
   function sideVideoRequest () {
     axios
-        .get(`https://project-2-api.herokuapp.com/videos/?api_key=<0e5174a0-d772-40a4-9218-ad902e35564f>`)
+        .get(`http://localhost:5002/videos`)
         .then(response => {
-          console.log('side api accessed??')
-          console.log(response.data)
           setVideoListDetails(response.data)
           if(!id){
             mainVideoRequest(response.data[0].id)
@@ -51,12 +47,10 @@ function Home() {
   }
 
     useEffect(()=> {
-      console.log('video main mounted?');
         mainVideoRequest(id);
     }, [id]);
       
     useEffect(()=> {
-      console.log('video side mounted?');
         sideVideoRequest();
     }, []);
   

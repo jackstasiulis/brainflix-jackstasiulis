@@ -3,7 +3,7 @@ import './ConvoComment.scss';
 
 function ConvoComment (props) {
 
-// ==================== Delete comment function ==================== //
+// ==================== Delete comment function (not working at the moment) ==================== //
 
 const handleDeleteComment = (event) => {
     event.preventDefault();
@@ -12,7 +12,8 @@ const handleDeleteComment = (event) => {
       }
 
     axios
-        .delete(`https://project-2-api.herokuapp.com/videos/${props.videoId}/comments/${props.id}?api_key=<0e5174a0-d772-40a4-9218-ad902e35564f>`)
+        // .delete(`https://project-2-api.herokuapp.com/videos/${props.videoId}/comments/${props.id}?api_key=<0e5174a0-d772-40a4-9218-ad902e35564f>`)
+        .delete(`http://localhost:5002/videos/${props.videoId}/comments/${props.id}`)
         .then(() => {
             props.mainVideoRequest(props.videoId)
             }

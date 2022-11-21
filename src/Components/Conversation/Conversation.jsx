@@ -16,17 +16,16 @@ const handlePostComment = (event) => {
     alert('Please add text to your commment!');
     return;
 }
-  const newComment ={
+  const newComment = {
     comment: event.target.comment.value,
-    name: 'bob simpy'
+    name: 'wayne barrier'
   }
-  console.log(newComment)
+  console.log(newComment);
     axios
-      .post(`https://project-2-api.herokuapp.com/videos/${props.id}/comments?api_key=<0e5174a0-d772-40a4-9218-ad902e35564f>`, newComment)
-      .then(() => {
+      .post(`http://localhost:5002/videos/${props.id}/comments`, newComment)
+      .then((res) => {
         props.mainVideoRequest(props.id);
-      }
-      )
+      }).catch((err) => alert(err));
     }
 
     return(
